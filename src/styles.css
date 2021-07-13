@@ -1,0 +1,27 @@
+* {
+  font-family: "Roboto", Arial;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+.App {
+  display: flex;
+  justify-content: center;
+  font-family: sans-serif;
+  text-align: center;
+  width: 100%;
+  height: 1000px;
+  
+}
+
+.viewport {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  height: 80%;
+  margin-top: 10px;
+  border: gainsboro solid 2px;
+}
+

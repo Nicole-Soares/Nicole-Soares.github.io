@@ -1,0 +1,16 @@
+.contenedor-busqueda{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.contenedor-titulo {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.contenedor-titulo p{
+   font-size: 30px;
+   color: #7839CD;
+}
