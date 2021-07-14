@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Gif from "./Gif"
 
 //let apiKey = "2ZEPY7PWMdCbc4nWcgflY72LcVevldu4";
@@ -8,18 +8,20 @@ import Gif from "./Gif"
 export default function Listado() {
   const [post, setPost] = useState([]);
 
- fetch("https://jsonplaceholder.typicode.com/albums/1/photos")
- .then((respuesta)=>{
-   return respuesta.json()
- })
- .then((data)=>{
-   setPost(data)
-   return setPost
- })
- .catch((error)=>{
-   return console.log(error)
- })
 
+useEffect(()=>{ 
+  fetch("https://jsonplaceholder.typicode.com/albums/1/photos")
+.then((respuesta)=>{
+  return respuesta.json()
+})
+.then((data)=>{
+  setPost(data)
+  return setPost
+})
+.catch((error)=>{
+  return console.log(error)
+})},[])
+ 
   return (
     <div >
       {post.length > 0 ? post.map((item)=>{ return<Gif imagen={item.url} />}):""}
