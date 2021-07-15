@@ -7,30 +7,27 @@
 .contenedor-titulo {
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
-.contenedor-titulo p{
+.oracion-inspirate{
    font-size: 30px;
    color: #7839CD;
 }
 
-.contenedor-icono-barra-busqueda{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 15px;
-  
+.oracion-inspirate.dark{
+ color: white;
 }
+
+.contenedor-icono-barra-busqueda{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 15px;
+  }
 
 .imagen{
   width: 50%;
-}
-
-.contenedor-input-boton{
-  width: 100%;
-  height: 50px;
-  
 }
 
 #barra{
@@ -39,21 +36,27 @@
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   text-align: center;
-}
+  background : inherit;
+   }
 
 #boton{
- width: 10%;
- height: 40px;
- background-color: #7839CD;
- border-bottom-right-radius: 20px;
- border-top-right-radius: 20px;
-}
+  width: 10%;
+  height: 40px;
+  background-color: #7839CD;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+ }
 
 .contenedor-resultados{
   margin-top: 70px;
 }
 
-.contenedor-resultados p{
+.oracion-resultados{
 color: #7839CD;
 margin-bottom: 30px;
 }
+
+.oracion-resultados.dark{
+ color: white;
+}
+

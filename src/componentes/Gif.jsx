@@ -5,7 +5,7 @@ export default function Gif(props) {
 
   return(
     <div>
-    <div>{props.imagen}</div>
+    <img src={props.imagen} alt="gifs"></img>
     </div>
 
 

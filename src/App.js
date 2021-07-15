@@ -6,12 +6,13 @@ import Listado from "./componentes/Listado"
 
 export default function App() {
   const [isDark, setIsDark] = useState(false);
+  const [gifs, setGifs] = useState([]);
   return (
     <div className={`App ${isDark ? "dark" : "light"}`}>
       <div className="viewport">
         <Header isDark={isDark} setIsDark={setIsDark}/>
-        <Busqueda />
-        <Listado />
+        <Busqueda isDark={isDark} gifs={gifs} setGifs={setGifs}/>
+        <Listado gifs={gifs}/>
       </div>
     </div>
   );

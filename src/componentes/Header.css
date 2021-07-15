@@ -15,11 +15,10 @@
   margin-right: 10px;
 }
 
-
 .boton-modo-nocturno{
   width:25%;
   height:30px;
-  background-color:white;
+  background : inherit;
   border-radius: 50px;
   border-color: #7839CD;
   color: #7839CD;
@@ -27,3 +26,7 @@
   font-weight: bold;
 }
 
+.boton-modo-nocturno.light{
+color: white;
+border-color: white;
+}
