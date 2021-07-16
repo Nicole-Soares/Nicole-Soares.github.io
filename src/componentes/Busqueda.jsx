@@ -5,7 +5,7 @@ import search from "../imagenes/search.svg";
 
 export default function Busqueda({ isDark, gifs, setGifs }) {
   const [userSearch, setUserSearch] = useState("");
-  const [url, setUrl] = useState(`https://api.giphy.com/v1/gifs/trending?api_key=2ZEPY7PWMdCbc4nWcgflY72LcVevldu4&limit=5`);
+  const [url, setUrl] = useState("https://api.giphy.com/v1/gifs/trending?api_key=2ZEPY7PWMdCbc4nWcgflY72LcVevldu4&limit=5");
 
   const traerGifs = () => {
     fetch(url)
@@ -22,7 +22,7 @@ export default function Busqueda({ isDark, gifs, setGifs }) {
 
   useEffect(() => {
     setUrl(
-      `https://api.giphy.com/v1/gifs/search?api_key=2ZEPY7PWMdCbc4nWcgflY72LcVevldu4&q=${userSearch}&limit=5`
+      `https://api.giphy.com/v1/gifs/search?api_key=2ZEPY7PWMdCbc4nWcgflY72LcVevldu4&q=${userSearch}&limit=12`
     );
   }, [userSearch]);
 
