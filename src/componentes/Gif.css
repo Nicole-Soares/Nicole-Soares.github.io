@@ -1,4 +1,12 @@
 .contenedor-gifs{
   display: flex;
-  background-color: #CD87F1;
+  background-color: #DBD9DD;
+}
+
+.contenedor-gifs.dark{
+ background-color:#0C0C0C;
+}
+
+.contenedor-gifs img{
+  display: flex;
 }

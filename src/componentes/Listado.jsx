@@ -6,7 +6,7 @@ let apiKey = "2ZEPY7PWMdCbc4nWcgflY72LcVevldu4"
 let url = `https://api.giphy.com/v1/gifs/trending?api_key=2ZEPY7PWMdCbc4nWcgflY72LcVevldu4`;
 
 
-export default function Listado({gifs, loading}) {
+export default function Listado({gifs, loading, isDark}) {
 
 
   if (!gifs || !gifs.length === 0) {
@@ -15,7 +15,7 @@ export default function Listado({gifs, loading}) {
 
   return (
     <div >
-      {loading ? <p>Loading...</p> : gifs.length > 0 ? gifs.map((item)=>{ return<Gif imagen={item.images.downsized.url} key={item.id} titulo={item.title} url={item.url} ancho={item.width} />}):<img src={Hourglass} alt="loading" />}
+      {loading ? <p>Loading...</p> : gifs.length > 0 ? gifs.map((item)=>{ return<Gif Dark={isDark} imagen={item.images.downsized.url} key={item.id} titulo={item.title} url={item.url} ancho={item.width} />}):<img src={Hourglass} alt="loading" />}
 
     </div>
   );

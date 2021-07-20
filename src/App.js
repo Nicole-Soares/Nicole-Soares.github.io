@@ -13,7 +13,7 @@ export default function App() {
       <div className="viewport">
         <Header isDark={isDark} setIsDark={setIsDark}/>
         <Busqueda isDark={isDark} gifs={gifs} setGifs={setGifs} setLoading={setLoading}/>
-        <Listado gifs={gifs} loading={loading}/>
+        <Listado gifs={gifs} loading={loading} isDark={isDark}/>
       </div>
     </div>
   );
