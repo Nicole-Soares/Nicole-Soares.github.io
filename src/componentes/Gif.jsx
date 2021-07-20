@@ -1,11 +1,13 @@
 import React from "react"
-
+import "./Gif.css";
 
 export default function Gif(props) {
 
   return(
-    <div>
-    <img src={props.imagen} alt="gifs"></img>
+    <div className="contenedor-gifs">
+      <a href={props.url} target="_blank" rel="noreferrer">
+    <img src={props.imagen} alt={props.titulo} width={props.ancho}></img>
+    </a>
     </div>
 
 

@@ -3,11 +3,12 @@ import "./Busqueda.css";
 import ilustra from "../imagenes/ilustra.svg";
 import search from "../imagenes/search.svg";
 
-export default function Busqueda({ isDark, gifs, setGifs }) {
+export default function Busqueda({ isDark, gifs, setGifs, setLoading}) {
   const [userSearch, setUserSearch] = useState("");
-  const [url, setUrl] = useState("https://api.giphy.com/v1/gifs/trending?api_key=2ZEPY7PWMdCbc4nWcgflY72LcVevldu4&limit=5");
+  const [url, setUrl] = useState("https://api.giphy.com/v1/gifs/trending?api_key=2ZEPY7PWMdCbc4nWcgflY72LcVevldu4&limit=12");
 
   const traerGifs = () => {
+    setLoading(true)
     fetch(url)
       .then((respuesta) => {
         return respuesta.json();
@@ -19,6 +20,12 @@ export default function Busqueda({ isDark, gifs, setGifs }) {
         return console.log(error);
       });
   };
+
+  useEffect(() => {
+    if (gifs.length > 0) {
+      setLoading(false);
+    }
+  }, [gifs]);
 
   useEffect(() => {
     setUrl(
