@@ -1,0 +1,10 @@
+.contenedor-listado {
+  display: flex;
+  justify-content: center;
+  background-color: #dbd9dd;
+  flex-wrap: wrap;
+}
+
+.contenedor-listado.dark {
+  background-color: #0c0c0c;
+}

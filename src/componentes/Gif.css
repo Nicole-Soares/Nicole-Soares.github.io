@@ -1,12 +1,13 @@
-.contenedor-gifs{
+.contenedor-gifs {
   display: flex;
-  background-color: #DBD9DD;
+  margin: 5px;
+  overflow: hidden;
 }
 
-.contenedor-gifs.dark{
- background-color:#0C0C0C;
+.gif.dark {
+  border: white 2px solid;
 }
 
-.contenedor-gifs img{
-  display: flex;
+.gif {
+  border: 2px solid black;
 }
