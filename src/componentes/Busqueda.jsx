@@ -27,12 +27,11 @@ export default function Busqueda({ isDark, gifs, setGifs, setLoading }) {
   };
 
   const getData = async () => {
-    console.log(userSearch);
     const res = await axios.get(
       `https://api.giphy.com/v1/gifs/search/tags?api_key=2ZEPY7PWMdCbc4nWcgflY72LcVevldu4&q=${userSearch}&limit=12`
     );
     var hintArray = [];
-    console.log(res.data);
+
     res.data.data.map((a) => hintArray.push(a.name));
     setHintData(hintArray);
   };
