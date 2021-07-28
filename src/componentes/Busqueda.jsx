@@ -2,13 +2,18 @@ import React, { useState, useEffect } from "react";
 import "./Busqueda.css";
 import ilustra from "../imagenes/ilustra.svg";
 import search from "../imagenes/search.svg";
+import { Hint } from "react-autocomplete-hint";
+import axios from "axios";
 
-export default function Busqueda({ isDark, gifs, setGifs, setLoading}) {
+export default function Busqueda({ isDark, gifs, setGifs, setLoading }) {
   const [userSearch, setUserSearch] = useState("");
-  const [url, setUrl] = useState("https://api.giphy.com/v1/gifs/trending?api_key=2ZEPY7PWMdCbc4nWcgflY72LcVevldu4&limit=12");
+  const [url, setUrl] = useState(
+    "https://api.giphy.com/v1/gifs/trending?api_key=2ZEPY7PWMdCbc4nWcgflY72LcVevldu4&limit=12"
+  );
+  const [HintData, setHintData] = useState([]);
 
   const traerGifs = () => {
-    setLoading(true)
+    setLoading(true);
     fetch(url)
       .then((respuesta) => {
         return respuesta.json();
@@ -21,6 +26,17 @@ export default function Busqueda({ isDark, gifs, setGifs, setLoading}) {
       });
   };
 
+  const getData = async () => {
+    console.log(userSearch);
+    const res = await axios.get(
+      `https://api.giphy.com/v1/gifs/search/tags?api_key=2ZEPY7PWMdCbc4nWcgflY72LcVevldu4&q=${userSearch}&limit=12`
+    );
+    var hintArray = [];
+    console.log(res.data);
+    res.data.data.map((a) => hintArray.push(a.name));
+    setHintData(hintArray);
+  };
+
   useEffect(() => {
     if (gifs.length > 0) {
       setLoading(false);
@@ -31,6 +47,7 @@ export default function Busqueda({ isDark, gifs, setGifs, setLoading}) {
     setUrl(
       `https://api.giphy.com/v1/gifs/search?api_key=2ZEPY7PWMdCbc4nWcgflY72LcVevldu4&q=${userSearch}&limit=12`
     );
+    getData();
   }, [userSearch]);
 
   useEffect(() => {
@@ -48,14 +65,18 @@ export default function Busqueda({ isDark, gifs, setGifs, setLoading}) {
         <div className="contenedor-imagen">
           <img className="imagen" src={ilustra} alt="icono" />
         </div>
-        <div className="field" id="searchform">
-          <input
-            type="text"
-            id="barra"
-            onChange={(e) => setUserSearch(e.target.value)}
-            value={userSearch}
-            placeholder="Busca gifs"
-          />
+        <div className="input-wrapper">
+          <div className="rah-input-wrapper">
+            <Hint options={HintData} allowTabFill>
+              <input
+                type="text"
+                id="barra"
+                onChange={(e) => setUserSearch(e.target.value)}
+                value={userSearch}
+                placeholder="Busca gifs"
+              />
+            </Hint>
+          </div>
           <button
             className="boton-busqueda"
             type="button"
