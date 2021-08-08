@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/pagina-de-gifs/static/css/main.b6962287.chunk.css",
+    "main.js": "/pagina-de-gifs/static/js/main.781e1a13.chunk.js",
+    "main.js.map": "/pagina-de-gifs/static/js/main.781e1a13.chunk.js.map",
+    "runtime-main.js": "/pagina-de-gifs/static/js/runtime-main.19727116.js",
+    "runtime-main.js.map": "/pagina-de-gifs/static/js/runtime-main.19727116.js.map",
+    "static/js/2.00914a53.chunk.js": "/pagina-de-gifs/static/js/2.00914a53.chunk.js",
+    "static/js/2.00914a53.chunk.js.map": "/pagina-de-gifs/static/js/2.00914a53.chunk.js.map",
+    "index.html": "/pagina-de-gifs/index.html",
+    "static/css/main.b6962287.chunk.css.map": "/pagina-de-gifs/static/css/main.b6962287.chunk.css.map",
+    "static/js/2.00914a53.chunk.js.LICENSE.txt": "/pagina-de-gifs/static/js/2.00914a53.chunk.js.LICENSE.txt",
+    "static/media/ilustra.8b095c8a.svg": "/pagina-de-gifs/static/media/ilustra.8b095c8a.svg",
+    "static/media/logo.7561dfb2.svg": "/pagina-de-gifs/static/media/logo.7561dfb2.svg",
+    "static/media/notfound.cac42436.jpg": "/pagina-de-gifs/static/media/notfound.cac42436.jpg",
+    "static/media/search.95654278.svg": "/pagina-de-gifs/static/media/search.95654278.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.19727116.js",
+    "static/js/2.00914a53.chunk.js",
+    "static/css/main.b6962287.chunk.css",
+    "static/js/main.781e1a13.chunk.js"
+  ]
+}
