@@ -37,7 +37,7 @@ export default function Busqueda({ isDark, gifs, setGifs, setLoading }) {
   };
 
   useEffect(() => {
-    if (gifs.length > 0) {
+    if (gifs.length >= 0) {
       setLoading(false);
     }
   }, [gifs]);

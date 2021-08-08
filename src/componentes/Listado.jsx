@@ -7,10 +7,6 @@ let apiKey = "2ZEPY7PWMdCbc4nWcgflY72LcVevldu4";
 let url = `https://api.giphy.com/v1/gifs/trending?api_key=2ZEPY7PWMdCbc4nWcgflY72LcVevldu4`;
 
 export default function Listado({ gifs, loading, isDark }) {
-  if (gifs.length === 0) {
-    return <img src={notfound} alt="no se encontro nada" />;
-  }
-
   return (
     <div className={`contenedor-listado ${isDark ? "dark" : "light"}`}>
       {loading ? (
@@ -29,7 +25,7 @@ export default function Listado({ gifs, loading, isDark }) {
           );
         })
       ) : (
-        <> </>
+        <img width="100%" src={notfound} alt="no se encontro nada" />
       )}
     </div>
   );
