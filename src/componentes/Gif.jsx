@@ -9,7 +9,7 @@ export default function Gif(props) {
           className={`gif ${props.Dark ? "dark" : "light"}`}
           src={props.imagen}
           alt={props.titulo}
-          width="350px"
+          width="100%"
           height="300px"
         ></img>
       </a>
